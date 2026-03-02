@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة الدفع</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>💳 إتمام عملية الدفع</h1>
+    </header>
+
+    <div class="card" style="margin: 40px auto; width: 350px;">
+
+        <h2 id="rankTitle"></h2>
+        <p id="rankPrice"></p>
+
+        <input type="text" id="mcName" placeholder="اسمك في ماين كرافت">
+        <input type="text" id="discordName" placeholder="اسمك في ديسكورد">
+        <input type="email" id="email" placeholder="بريدك الإلكتروني">
+
+        <select id="paymentMethod" style="width:100%; padding:10px; border-radius:10px; margin:15px 0;">
+            <option value="">اختر طريقة الدفع</option>
+            <option value="Vodafone Cash">فودافون كاش</option>
+            <option value="PayPal">PayPal</option>
+            <option value="InstaPay">InstaPay</option>
+        </select>
+
+        <button onclick="submitPayment()">تأكيد الدفع</button>
+
+    </div>
+
+<script>
+    let rank = localStorage.getItem("rankName");
+    let price = localStorage.getItem("rankPrice");
+
+    document.getElementById("rankTitle").innerText = "شراء رتبة " + rank;
+    document.getElementById("rankPrice").innerText = "السعر: " + price + " جنيه";
+
+    function submitPayment() {
+        let mc = document.getElementById("mcName").value;
+        let discord = document.getElementById("discordName").value;
+        let email = document.getElementById("email").value;
+        let method = document.getElementById("paymentMethod").value;
+
+        if(mc === "" || discord === "" || email === "" || method === "") {
+            alert("من فضلك املأ كل البيانات");
+            return;
+        }
+
+        alert("تم إرسال طلب الدفع بنجاح ✅\nسيتم مراجعة طلبك قريباً");
+
+        window.location.href = "index.html";
+    }
+</script>
+
+</body>
+</html>
