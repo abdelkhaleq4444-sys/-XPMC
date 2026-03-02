@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('XPMC.png.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* HEADER */
+header {
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #00ffcc, #00ff88);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* CARDS */
+.lands {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    width: 250px;
+    transition: 0.4s;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px #00ffcc;
+}
+
+.price {
+    color: #00ffcc;
+    font-size: 20px;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+/* MODERN BUTTON */
+button {
+    padding: 12px 25px;
+    border-radius: 50px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #00ffcc, #00ff88);
+    color: black;
+    font-weight: bold;
+    transition: 0.4s;
+    box-shadow: 0 0 15px rgba(0,255,200,0.5);
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px #00ffcc;
+}
+
+/* POPUP */
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+}
+
+.popup-content {
+    background: #1b1b1b;
+    padding: 30px;
+    width: 320px;
+    border-radius: 20px;
+    margin: 150px auto;
+    box-shadow: 0 0 30px rgba(0,255,200,0.5);
+}
+
+input {
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    margin: 15px 0;
+    outline: none;
+}
+
+.close {
+    background: crimson;
+    color: white;
+    margin-top: 10px;
+}
