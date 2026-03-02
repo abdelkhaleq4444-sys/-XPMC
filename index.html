@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر  XPMC </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🟩 متجر XPMC </h1>
+        <p>اشتري رتبتك الان واستمتع في السيرفر </p>
+        <p>  IP: xpmc.xyz:25565  </p>
+    </header>
+
+    <section class="lands">
+
+        <div class="card">
+        <h2>🥉 VIP</h2>
+        <p>• /fly في السبون</p>
+        <p>• كيت VIP يومي</p>
+        <p>• 2 منازل</p>
+        <p>• أولوية دخول السيرفر</p>
+        <p class="price">50 جنيه</p>
+        <button onclick="window.open('https://forms.office.com/r/UesPTsssEZ &Rank=VIP&Price=50', '_blank')">شراء</button>
+        </div>
+
+        <div class="card">
+        <h2>🥈 MVP</h2>
+        <p>• /fly في كل مكان</p>
+        <p>• كيت MVP مميز</p>
+        <p>• 5 منازل</p>
+        <p>• لون مميز في الشات</p>
+        <p class="price">100 جنيه</p>
+        <button onclick="window.open('https://forms.office.com/r/UesPTsssEZ &Rank=MVP&Price=100', '_blank')">شراء</button>
+        </div>
+
+       <div class="card">
+        <h2>🥇 LEGEND</h2>
+        <p>• /fly دائم</p>
+        <p>• كيت أسطوري</p>
+        <p>• عدد منازل غير محدود</p>
+        <p>• صلاحيات خاصة</p>
+        <p class="price">200 جنيه</p>
+        <button onclick="window.open('https://forms.office.com/r/UesPTsssEZ &Rank=LEGEND&Price=200', '_blank')">شراء</button>
+        </div>
+
+    </section>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <h2 id="landName"></h2>
+            <p id="landPrice"></p>
+            <input type="text" id="playerName" placeholder="اكتب اسمك في ماين كرافت">
+            <button onclick="confirmPurchase()">تأكيد الشراء</button>
+            <button class="close" onclick="closePopup()">إلغاء</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
